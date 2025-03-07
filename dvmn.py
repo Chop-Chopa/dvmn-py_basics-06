@@ -1,6 +1,3 @@
-PASSWORD = input("Введите пароль: ")
-
-
 def is_very_long(password):
     return len(password) >= 12
 
@@ -22,12 +19,14 @@ def has_symbols(password):
 
 
 def main():
+    user_password = input("Введите пароль: ")
+    
     score_conditions = [
-        is_very_long(PASSWORD),
-        has_digit(PASSWORD),
-        has_upper_letters(PASSWORD),
-        has_lower_letters(PASSWORD),
-        has_symbols(PASSWORD),
+        is_very_long(user_password),
+        has_digit(user_password),
+        has_upper_letters(user_password),
+        has_lower_letters(user_password),
+        has_symbols(user_password),
     ]
     new_score = [score for score in score_conditions if score]
 
